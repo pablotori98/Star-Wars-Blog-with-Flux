@@ -63,7 +63,7 @@ h2{
 
 .btn-yellow{
     background-color: #FFE919;
-    width: 100%;
+    width: 70%;
 }
 
 .vehiculo{
@@ -73,4 +73,14 @@ h2{
 .imgTop img{
     width: 100%;
     height: auto;
+}
+
+.buttonFlux{
+    background-color: #FFE919;
+}
+
+.fav{
+    background-color: #FFE919;
+    width: 20%;
+    margin: 10px;
 }

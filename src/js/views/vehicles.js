@@ -47,7 +47,8 @@ useEffect(()=>{
 
 
 
-                    <Link to="" className="btn btn-yellow ">Saber más</Link>
+                    <Link to={"/character/"+(index+1)} className="btn btn-yellow">Saber más</Link>
+                    <Link className="btn fav"><i class="fas fa-star"></i></Link>
                 </div>
             </div>
             </div>

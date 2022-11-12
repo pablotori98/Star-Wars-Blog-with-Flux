@@ -33,7 +33,8 @@ useEffect(()=>{
                         <p className="card-text "><strong>Rotación</strong>  {element.rotation_period} dias</p>
 
 
-                        <Link to= {"/planets/"+(index+2)} className="btn btn-yellow">Saber más</Link>
+                        <Link to={"/character/"+(index+1)} className="btn btn-yellow">Saber más</Link>
+                            <Link className="btn fav"><i class="fas fa-star"></i></Link>
                     </div>
                 </div>
             </div>
