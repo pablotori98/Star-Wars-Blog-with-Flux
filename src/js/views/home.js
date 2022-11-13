@@ -1,11 +1,16 @@
-import React from "react";
+import React, { useContext } from "react";
 import rigoImage from "../../img/rigo-baby.jpg";
 import "../../styles/home.css";
 import { Planets } from "./planets";
 import { Characters } from "./characters";
 import { Vehicles } from "./vehicles";
+import { Context } from "../store/appContext";
 
-export const Home = () => (
+export const Home = () => {
+
+	const {actions} = useContext(Context)
+
+	return (
 	<>
 	<div className="imgTop">
 		<img src="https://64.media.tumblr.com/ddfbfc24be265f200e33e678448874ba/fc34a265b8621eec-fb/s2048x3072/95b2add499e4259db198d964e3d448d32cce408f.gif"/>
@@ -19,4 +24,4 @@ export const Home = () => (
 		<Vehicles />
 	</div>
 	</>
-);
+)};

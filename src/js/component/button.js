@@ -1,18 +1,21 @@
-import React from "react";
+import React, { useContext } from "react";
+import { Context } from "../store/appContext";
+import { RiDeleteBin6Line } from 'react-icons/ri';
+
 
 export const ButtonFlux = () => {
-
+    const {store, actions} = useContext(Context)
 
     return (
 
-        <div class="dropdown">
-            <button class="btn  dropdown-toggle buttonFlux" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+        <div className="dropdown me-4">
+            <button className="btn  dropdown-toggle buttonFlux" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Favoritos
             </button>
-            <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li><a class="dropdown-item" href="#">Something else here</a></li>
+            <ul className="dropdown-menu">
+                {store.button.map((element, index)=>{return    <li key={index}><a className="dropdown-item" href="#">{element}
+                <button onClick={()=> actions.deleteElement(index)} className="btn"><RiDeleteBin6Line /></button>
+                </a></li>})}
             </ul>
         </div>
 

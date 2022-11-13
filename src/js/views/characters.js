@@ -1,10 +1,14 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { Context } from "../store/appContext";
 
 
 export const Characters = () => {
 
     const [people, setPeople] = useState({})
+
+    const {actions} = useContext(Context)
+
 
     useEffect(()=>{
     var requestOptions = {
@@ -37,7 +41,7 @@ export const Characters = () => {
     
     
                             <Link to={"/character/"+(index+1)} className="btn btn-yellow">Saber más</Link>
-                            <Link to={"/character/"+(index+1)} className="btn fav"><i class="fas fa-star"></i></Link>
+                            <button className="btn fav" onClick={()=> actions.addElement(element.name)}><i className="fas fa-star"></i></button>
                         </div>
                     </div>
                 </div>

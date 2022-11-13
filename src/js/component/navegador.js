@@ -10,7 +10,6 @@ export const Navegador = () => {
             <li className="nav-item "><Link className="px-5 nav-link" to="/planets">Planets</Link></li>
             <li className="nav-item "><Link className="px-5 nav-link" to="/characters">Characters</Link></li>
             <li className="nav-item "><Link className="px-5 nav-link" to="/vehicles">Vehicles</Link></li>
-            <li className="nav-item "><Link className="px-5 nav-link" to="/starships">Starships</Link></li>
         </ul>
 
     )

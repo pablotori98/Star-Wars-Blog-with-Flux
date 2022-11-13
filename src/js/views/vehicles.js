@@ -1,5 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { Context } from "../store/appContext";
+
 
 export const Vehicles = () => {
 
@@ -16,6 +18,7 @@ export const Vehicles = () => {
     10: "https://www.renderhub.com/dazinbane/jabbas-barge/jabbas-barge-01.jpg"}
 
     const [vehicle, setVehicle] = useState({})
+    const {actions} = useContext(Context)
 
 useEffect(()=>{
     var requestOptions = {
@@ -36,7 +39,7 @@ useEffect(()=>{
             {vehicle.results?.map((element, index) => {
             return(
             <div className="carta">
-            <div className="card m-2 vehiculo" style={{width: "18rem"}}>
+            <div className="card m-2 vehiculo" key={index} style={{width: "18rem"}}>
                 <img src={vehiclesObj[(index+1)]} className="card-img-top" alt="..."/>
                 <div className="card-body">
                     <h5 className="card-title">{element.name}</h5>
@@ -48,7 +51,7 @@ useEffect(()=>{
 
 
                     <Link to={"/character/"+(index+1)} className="btn btn-yellow">Saber más</Link>
-                    <Link className="btn fav"><i class="fas fa-star"></i></Link>
+                    <button className="btn fav" onClick={()=> actions.addElement(element.name)}><i className="fas fa-star"></i></button>
                 </div>
             </div>
             </div>

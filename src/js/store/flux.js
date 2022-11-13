@@ -12,7 +12,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 					background: "white",
 					initial: "white"
 				}
-			]
+			],
+			button: []
 		},
 		actions: {
 			// Use getActions to call a function within a fuction
@@ -23,6 +24,16 @@ const getState = ({ getStore, getActions, setStore }) => {
 				/**
 					fetch().then().then(data => setStore({ "foo": data.bar }))
 				*/
+			},
+			addElement: (element)=>{
+				const store = getStore();
+				setStore({button: [...store.button, element]}) //3 puntos array.push
+
+			},
+
+			deleteElement: (index) =>{
+				const store = getStore()
+				setStore({button: store.button.filter((buttonFav, i, arr)=> i !== index)})
 			},
 			changeColor: (index, color) => {
 				//get the store
