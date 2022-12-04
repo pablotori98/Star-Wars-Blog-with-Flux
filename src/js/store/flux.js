@@ -13,7 +13,12 @@ const getState = ({ getStore, getActions, setStore }) => {
 					initial: "white"
 				}
 			],
-			button: []
+			button: [],
+			characters: {},
+			character: {},
+			planets: {},
+			planet: {},
+
 		},
 		actions: {
 			// Use getActions to call a function within a fuction
@@ -46,8 +51,34 @@ const getState = ({ getStore, getActions, setStore }) => {
 					return elm;
 				});
 
+
+				
 				//reset the global store
 				setStore({ demo: demo });
+			},
+			loadCharacters: () =>{
+				fetch("https://swapi.tech/api/people/")
+				.then(response => response.json())
+				.then(result => setStore({characters: result}))
+				.catch(error => console.log('error', error));
+			},
+			loadCharactersById: (id) =>{
+				fetch("https://swapi.tech/api/people/"+id)
+				.then(response => response.json())
+				.then(result => setStore({character: result}))
+				.catch(error => console.log('error', error));
+			},
+			loadPlanets:()=>{
+				fetch("https://swapi.tech/api/planets/")
+				.then(response => response.json())
+				.then(result => setStore({planets: result}))
+				.catch(error => console.log('error', error));
+			},
+			loadPlanetsById:(id)=>{
+			fetch("https://swapi.tech/api/planets/"+id)
+            .then(response => response.json())
+            .then(data => setStore({planet: data}))
+            .catch(error => console.log('error', error));
 			}
 		}
 	};

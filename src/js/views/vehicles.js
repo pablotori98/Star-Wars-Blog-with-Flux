@@ -26,7 +26,7 @@ useEffect(()=>{
         redirect: 'follow'
       };
       
-      fetch("https://swapi.dev/api/vehicles/", requestOptions)
+      fetch("https://swapi.tech/api/vehicles/", requestOptions)
         .then(response => response.json())
         .then(vehicle => setVehicle(vehicle))
         .catch(error => console.log('error', error));
@@ -50,8 +50,8 @@ useEffect(()=>{
 
 
 
-                    <Link to={"/character/"+(index+1)} className="btn btn-yellow">Saber más</Link>
-                    <button className="btn fav" onClick={()=> actions.addElement(element.name)}><i className="fas fa-star"></i></button>
+                    <Link to={"/vehicle/"+(index+1)} className="btn btn-yellow">Saber más</Link>
+                    <button className="btn fav" onClick={()=> actions.addElement(element)}><i className="fas fa-star"></i></button>
                 </div>
             </div>
             </div>

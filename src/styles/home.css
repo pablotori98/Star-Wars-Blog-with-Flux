@@ -88,3 +88,14 @@ h2{
 .fa-star{
    color: white;
 }
+
+.imgCard{
+    max-width: 50%;
+}
+
+.fav-link{
+    color: black;
+    font-weight: 700;
+    text-decoration: none;
+
+}

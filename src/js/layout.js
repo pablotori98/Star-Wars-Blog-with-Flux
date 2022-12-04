@@ -11,9 +11,12 @@ import { Vehicles } from "./views/vehicles";
 import { Planet } from "./views/planet";
 import { Character } from "./views/character";
 import injectContext from "./store/appContext";
+import { Vehicle } from "./views/vehicle";
+import { Favourites } from "./views/favourites";
 
 import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
+import { favourites } from "./views/favourites";
 
 //create your first component
 const Layout = () => {
@@ -33,21 +36,24 @@ const Layout = () => {
 						<Route exact path="/planets">
 							<Planets />
 						</Route>
-						<Route exact path="/planets/:idPlanets">
+						<Route exact path="/planet/:idplanet">
 							<Planet />
 						</Route>
 						<Route exact path="/characters">
 							<Characters />
 						</Route>
-						<Route exact path="/character/:idCharacter">
+						<Route exact path="/character/:idcharacter">
 							<Character />
 						</Route>
 						<Route exact path="/vehicles">
 							<Vehicles />
 						</Route>
-						{/* <Route exact path="/vehicles/:idVehicles">
+						<Route exact path="/vehicle/:idvehicle">
 							<Vehicle />
-						</Route> */}
+						</Route>
+						<Route exact path="/favourites">
+							<Favourites />
+						</Route>
 						<Route exact path="/single/:theid">
 							<Single />
 						</Route>
