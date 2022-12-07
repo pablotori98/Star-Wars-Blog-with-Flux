@@ -26,7 +26,7 @@ useEffect(()=>{
         redirect: 'follow'
       };
       
-      fetch("https://swapi.tech/api/vehicles/", requestOptions)
+      fetch("https://swapi.dev/api/vehicles/", requestOptions)
         .then(response => response.json())
         .then(vehicle => setVehicle(vehicle))
         .catch(error => console.log('error', error));
