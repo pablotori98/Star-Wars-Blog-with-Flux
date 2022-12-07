@@ -18,9 +18,11 @@ export const Planet = () => {
                 <img src={"https://starwars-visualguide.com/assets/img/planets/" + ((params.idplanet)) + ".jpg"}/>
                 <div className="p-4">
                     <h1 className="display-4">{store.planet.name}</h1>
-                    <p className="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
-                    <hr className="my-4"/>
-                    <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+                    <p className="lead"><strong>Gravedad: </strong>{store.planet.gravity}</p>
+                    <p className="lead"><strong>Población: </strong>{store.planet.population} habitantes</p>
+                    <p className="lead"><strong>Periodo de rotación: </strong>{store.planet.rotation_period} días</p>
+                    <p className="lead"><strong>Clima: </strong>{store.planet.climate}</p>
+                    <p className="lead"><strong>Terreno: </strong>{store.planet.terrain}</p>
                 </div>
             </div>
 
