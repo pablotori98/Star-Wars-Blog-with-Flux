@@ -112,3 +112,18 @@ h2{
     background-color: #ffe919;
     }
 
+@media(max-width: 790px){
+.imgJumboPlanet{
+    max-width: 200px;
+    max-height: 200px;
+}
+.imgJumboCharacter{
+    max-width: 200px;
+}
+
+#btnfluxfav{
+position:absolute;
+top: 18px;
+left: 70%;}
+
+}

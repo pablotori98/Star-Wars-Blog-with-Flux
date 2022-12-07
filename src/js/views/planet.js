@@ -2,6 +2,7 @@ import { element } from "prop-types";
 import React, { useContext, useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { Context } from "../store/appContext";
+import "../../styles/home.css";
 
 export const Planet = () => {
 
@@ -14,8 +15,8 @@ export const Planet = () => {
 
         return (
         
-            <div className="jumbotron d-flex container">
-                <img src={"https://starwars-visualguide.com/assets/img/planets/" + ((params.idplanet)) + ".jpg"}/>
+            <div className="jumbotron d-flex flex-wrap justify-content-center container">
+                <div><img className="imgJumboPlanet" src={"https://starwars-visualguide.com/assets/img/planets/" + ((params.idplanet)) + ".jpg"}/></div>
                 <div className="p-4">
                     <h1 className="display-4">{store.planet.name}</h1>
                     <p className="lead"><strong>Gravedad: </strong>{store.planet.gravity}</p>

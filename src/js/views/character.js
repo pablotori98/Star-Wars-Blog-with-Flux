@@ -13,8 +13,8 @@ export const Character = () => {
 
     return (
 
-        <div className="jumbotron d-flex container">
-            <img src={"https://starwars-visualguide.com/assets/img/characters/" + ((params.idcharacter)) + ".jpg"}/>
+        <div className="jumbotron d-flex flex-wrap container justify-content-center">
+            <img className="imgJumboCharacter" src={"https://starwars-visualguide.com/assets/img/characters/" + ((params.idcharacter)) + ".jpg"}/>
             <div className="p-4">
                 <h1 className="display-4">{store.character.name}</h1>
                 <p className="card-text "><strong> Altura:</strong> {store.character.height}</p>
