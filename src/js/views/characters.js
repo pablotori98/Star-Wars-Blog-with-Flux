@@ -24,9 +24,9 @@ export const Characters = () => {
                         <img src={"https://starwars-visualguide.com/assets/img/characters/"+(index+1)+".jpg"} className="card-img-top" alt="..."/>
                         <div className="card-body">
                             <h5 className="card-title">{element.name}</h5>
-                            <p className="card-text "><strong> Altura:</strong> {element.height}</p>
-                            <p className="card-text "><strong>Color de pelo:</strong> {element.hair_color}</p>
-                            <p className="card-text "><strong>Genero:</strong> {element.gender}</p>
+                            <p className="card-text "><strong> Altura:</strong> {element.height} cm</p>
+                            <p className="card-text "><strong>Color de pelo:</strong> {element.hair_color.charAt(0).toUpperCase() + element.hair_color.slice(1)}</p>
+                            <p className="card-text "><strong>Genero:</strong> {element.gender.charAt(0).toUpperCase() + element.gender.slice(1)}</p>
     
     
                             <Link to={"/character/"+(index+1)} className="btn btn-yellow">Saber más</Link>

@@ -20,9 +20,9 @@ useEffect(()=>{
                     <img src={"https://starwars-visualguide.com/assets/img/planets/"+(index+2)+".jpg"} className="card-img-top" alt="..."/>
                     <div className="card-body">
                         <h5 className="card-title">{element.name}</h5>
-                        <p className="card-text "><strong> Tipo de clima:</strong> {element.climate}</p>
-                        <p className="card-text "><strong>Terreno:</strong> {element.terrain}</p>
-                        <p className="card-text "><strong>Población:</strong> {element.population} habitantes</p>
+                        <p className="card-text "><strong> Tipo de clima:</strong> {element.climate.charAt(0).toUpperCase() + element.climate.slice(1)}</p>
+                        <p className="card-text "><strong>Terreno:</strong> {element.terrain.charAt(0).toUpperCase() + element.terrain.slice(1)}</p>
+                        <p className="card-text "><strong>Población:</strong> {element.population.charAt(0).toUpperCase() + element.population.slice(1)} habitantes</p>
                         <p className="card-text "><strong>Rotación</strong>  {element.rotation_period} dias</p>
 
 

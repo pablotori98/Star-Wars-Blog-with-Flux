@@ -40,6 +40,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 				const store = getStore()
 				setStore({button: store.button.filter((buttonFav, i, arr)=> i !== index)})
 			},
+
 			changeColor: (index, color) => {
 				//get the store
 				const store = getStore();
